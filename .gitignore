@@ -1,0 +1,5 @@
+Thumbs.db
+*.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.bak

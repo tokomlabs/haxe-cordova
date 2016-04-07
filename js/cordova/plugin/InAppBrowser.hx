@@ -1,10 +1,5 @@
 package js.cordova.plugin;
 
-typedef InAppBrowserOptions = {
-	location : String // Set to yes or no to turn the InAppBrowser's location bar on or off.
-	// TODO rest
-}
-
 /**
 Extern for the [cordova-plugin-inappbrowser](https://github.com/apache/cordova-plugin-inappbrowser) plugin.
 **/
@@ -21,7 +16,7 @@ extern class InAppBrowser {
 
 	options: Options for the InAppBrowser. Optional, defaulting to: location=yes. (String)
 	**/
-	public static function open(url : String, target : String, ? options : Null<InAppBrowserOptions>) : InAppBrowser;
+	public static function open(url : String, target : String, ? options : String) : InAppBrowser;
 
 	// TODO
 	// public function addEventListener() : Void;

@@ -48,5 +48,6 @@ Extern for the [phonegap-plugin-push](https://github.com/phonegap/phonegap-plugi
 extern class PushNotification {
 	public static function init(options : PushNotificationOptions) : PushNotification;
 	public function on(ev : String, cb : EitherType<RegistrationData,EitherType<NotificationData, js.Error>> -> Void) : Void;
-	public function finish(? successCb : Void -> Void, ? errorCb : Void -> Void) : Void;
+	public function finish(? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
+	public function unregister(? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
 }

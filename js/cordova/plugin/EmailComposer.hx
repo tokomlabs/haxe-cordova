@@ -14,7 +14,7 @@ typedef EmailData = {
 }
 
 /**
-Extern for the [email composer](https://github.com/katzer/cordova-plugin-email-composer.git) plugin.
+Extern for the [cordova-plugin-email-composer](https://github.com/katzer/cordova-plugin-email-composer.git) plugin.
 **/
 @:native("window.plugin.email")
 extern class EmailComposer {

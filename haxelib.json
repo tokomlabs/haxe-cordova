@@ -1,0 +1,13 @@
+{
+	"name": "cordova",
+	"license": "MIT",
+	"tags": [],
+	"description": "Set of externs to use with Haxe js and Apache Cordova plugins",
+	"contributors": [
+    	"tokom","zabojad"
+	],
+	"releasenote": "See https://github.com/tokomlabs/haxe-cordova/blob/master/README.md",
+	"version": "0.0.1",
+	"url": "https://github.com/tokomlabs/haxe-cordova",
+	"dependencies": { }
+}

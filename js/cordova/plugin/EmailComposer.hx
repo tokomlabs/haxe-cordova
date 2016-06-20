@@ -19,5 +19,5 @@ Extern for the [cordova-plugin-email-composer](https://github.com/katzer/cordova
 @:native("window.plugin.email")
 extern class EmailComposer {
     public static function isAvailable(isAvailable : Bool -> Void) : Void;
-    public static function open(email : EmailData) : Void;
+    public static function open(email : EmailData, ? cb : Void -> Void) : Void;
 }

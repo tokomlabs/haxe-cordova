@@ -11,7 +11,7 @@ abstract Orientation(String) from String to String {
 }
 
 /**
-Extern for the [cordova-plugin-screen-orientation](https://github.com/gbenvenuti/cordova-plugin-screen-orientation) plugin.
+Extern for the [cordova-plugin-screen-orientation](https://github.com/apache/cordova-plugin-screen-orientation) plugin.
 **/
 @:native("window.screen")
 extern class ScreenOrientation {

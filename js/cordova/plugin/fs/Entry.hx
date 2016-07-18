@@ -32,4 +32,6 @@ extern class Entry
 
 	function toURL() : String;
 
+	function toInternalURL() : String;
+
 }

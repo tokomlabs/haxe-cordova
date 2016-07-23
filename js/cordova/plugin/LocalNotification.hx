@@ -35,12 +35,12 @@ Extern for the [de.appplant.cordova.plugin.local-notification](https://github.co
 **/
 @:native("cordova.plugins.notification.local")
 extern class LocalNotification {
-	static public function schedule(n : haxe.extern.EitherType<LocalNotificationData,Array<LocalNotificationData>>) : Void;
-	static public function update(n : haxe.extern.EitherType<LocalNotificationData,Array<LocalNotificationData>>) : Void;
+	static public function schedule(n : haxe.extern.EitherType<LocalNotificationData,Array<LocalNotificationData>>, ? callback : Void -> Void) : Void;
+	static public function update(n : haxe.extern.EitherType<LocalNotificationData,Array<LocalNotificationData>>, ? callback : Void -> Void) : Void;
 	static public function on(evt : LocalNotificationEvent, callback : LocalNotificationData -> Void) : Void;
-	static public function clear(ids : haxe.extern.EitherType<Int,Array<Int>>, callback : Void -> Void) : Void;
+	static public function clear(ids : haxe.extern.EitherType<Int,Array<Int>>, ? callback : Void -> Void) : Void;
 	static public function clearAll(callback : Void -> Void) : Void;
-	static public function cancel(ids : haxe.extern.EitherType<Int,Array<Int>>, callback : Void -> Void) : Void;
+	static public function cancel(ids : haxe.extern.EitherType<Int,Array<Int>>, ? callback : Void -> Void) : Void;
 	static public function cancelAll(callback : Void -> Void) : Void;
 	static public function isPresent(id : Int, callback : Bool -> Void) : Void;
 	static public function isScheduled(id : Int, callback : Bool -> Void) : Void;

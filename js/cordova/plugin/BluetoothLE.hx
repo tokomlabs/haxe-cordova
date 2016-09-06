@@ -30,7 +30,7 @@ extern class BluetoothLE {
 	public static function connect(id : String, onSuccess : BluetoothLEPeripheral -> Void, onError : BluetoothLEPeripheral -> Void) : Void;
 	public static function disconnect(id : String, onSuccess : Void -> Void, onError : String -> Void) : Void;
 	public static function write(deviceId : String, serviceUuid : String, characteristicUuid : String, data : js.html.ArrayBuffer, onSuccess : Dynamic -> Void, onError : String -> Void) : Void;
-	public static function writeWithoutResponse(deviceId : String, serviceUuid : String, characteristicUuid : String, data : js.html.ArrayBuffer, onSuccess : Void -> Void, onError : String -> Void) : Void;
+	public static function writeWithoutResponse(deviceId : String, serviceUuid : String, characteristicUuid : String, data : js.html.ArrayBuffer, onSuccess : Dynamic -> Void, onError : String -> Void) : Void;
 	public static function startNotification(deviceId : String, serviceUuid : String, characteristicUuid : String, success : js.html.ArrayBuffer -> Void, failure : String -> Void) : Void;
 	public static function read(deviceId : String, serviceUuid : String, characteristicUuid : String, success : js.html.ArrayBuffer -> Void, failure : String -> Void) : Void;
     public static function stopNotification(deviceId : String, serviceUuid : String, characteristicUuid : String, ? success : Void -> Void, ? failure : String -> Void) : Void;

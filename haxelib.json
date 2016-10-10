@@ -4,7 +4,7 @@
 	"tags": ["js","javascript","cordova","phonegap"],
 	"description": "Set of externs to use Apache Cordova plugins with Haxe js.",
 	"contributors": [
-    	"tokom","zabojad"
+    	"zabojad"
 	],
 	"releasenote": "See https://github.com/tokomlabs/haxe-cordova/blob/master/README.md",
 	"version": "0.0.1",

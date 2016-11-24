@@ -11,6 +11,7 @@ Compatible with Haxe 3.2+.
 * [cordova-plugin-calendar](https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin),
 * [cordova-plugin-camera](https://github.com/apache/cordova-plugin-camera),
 * [com.verso.cordova.clipboard](https://github.com/VersoSolutions/CordovaClipboard),
+* [cordova-plugin-datepicker](https://github.com/VitaliiBlagodir/cordova-plugin-datepicker),
 * [cordova-plugin-device](https://github.com/apache/cordova-plugin-device),
 * [cordova-plugin-email-composer](https://github.com/katzer/cordova-plugin-email-composer.git),
 * [phonegap-facebook-plugin](https://github.com/Wizcorp/phonegap-facebook-plugin),

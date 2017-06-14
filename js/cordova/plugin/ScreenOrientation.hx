@@ -8,14 +8,17 @@ abstract Orientation(String) from String to String {
 	var LandscapeSecondary = "landscape-secondary";
 	var Portrait = "portrait";
 	var Landscape = "landscape";
+	var Any = "any";
 }
 
 /**
 Extern for the [cordova-plugin-screen-orientation](https://github.com/apache/cordova-plugin-screen-orientation) plugin.
 **/
-@:native("window.screen")
+@:native("window.screen.orientation")
 extern class ScreenOrientation {
-	static public function lockOrientation(v : Orientation) : Void;
-	static public function unlockOrientation() : Void;
-	static public var orientation : Orientation;
+	static public function lock(v : Orientation) : Void;
+	static public function unlock() : Void;
+	static public function addEventListener(type : String, cb : Void -> Void) : Void;
+	static public var onchange : Void -> Void;
+	static public var type : Orientation;
 }

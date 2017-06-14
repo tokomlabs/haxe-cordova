@@ -1,7 +1,7 @@
 {
 	"name": "cordova",
 	"license": "MIT",
-	"tags": ["js","javascript","cordova","phonegap","android","ios","windows","phone","tablet"],
+	"tags": ["js","javascript","cordova","phonegap","android","ios","windows","phone","tablet","extern"],
 	"description": "Set of externs to use Apache Cordova plugins with Haxe js.",
 	"contributors": [
     	"zabojad"

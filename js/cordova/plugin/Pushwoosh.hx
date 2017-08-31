@@ -15,8 +15,9 @@ typedef PushwooshNotification = {
 }
 
 typedef PushwooshConfig = {
+	? appid : String,
 	? projectid : String,
-	pw_appid : String
+	? serviceName : String
 }
 
 /**

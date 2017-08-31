@@ -7,20 +7,22 @@ typedef PushNotificationOptionsIOS = {
 	? badge : Bool,
 	? sound : Bool,
 	? clearBadge : Bool,
-	? senderID : String,
-	? gcmSandbox : Bool,
+	? fcmSandbox : Bool,
+	? categories : Dynamic, // The data required in order to enabled Action Buttons for iOS. See Action Buttons on iOS for more details.
 	? topics : Array<String>
 }
 
 typedef PushNotificationOptionsAndroid = {
-	senderID : String,
 	? icon : String,
 	? iconColor : String,
 	? sound : Bool,
 	? vibrate : Bool,
+	? clearBadge : Bool,
 	? clearNotifications : Bool,
 	? forceShow : Bool,
-	? topics : Array<String>
+	? topics : Array<String>,
+	? messageKey : String,
+	? titleKey : String,
 }
 
 typedef PushNotificationOptions = {
@@ -29,7 +31,8 @@ typedef PushNotificationOptions = {
 }
 
 typedef RegistrationData = {
-	registrationId : String
+	registrationId : String,
+	registrationType : String
 }
 
 typedef NotificationData = {
@@ -38,7 +41,7 @@ typedef NotificationData = {
 	count : String,
 	sound : String,
 	image : String,
-	? additionalData : { foreground : Bool }
+	? additionalData : Dynamic //{ ? coldstart : Bool, ? dismissed : Bool, ? foreground : Bool }
 }
 
 /**
@@ -50,4 +53,6 @@ extern class PushNotification {
 	public function on(ev : String, cb : EitherType<RegistrationData,EitherType<NotificationData, js.Error>> -> Void) : Void;
 	public function finish(? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
 	public function unregister(? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
+	public function subscribe(topic : String, ? successCb : Void -> Void, ? errorCb : js.Error -> Void) : Void;
+	public function unsubscribe(topic : String, ? successCb : Void -> Void, ? errorCb : js.Error -> Void) : Void;
 }

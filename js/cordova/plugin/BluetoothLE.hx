@@ -39,9 +39,9 @@ extern class BluetoothLE {
 	public static function scan(services : Array<String>, seconds : Int, onSuccess : BluetoothLEPeripheral -> Void, onError : String -> Void) : Void;
 	public static function startScan(services : Array<String>, onSuccess : BluetoothLEPeripheral -> Void, onError : String -> Void) : Void;
 	public static function stopScan(onSuccess : Void -> Void, onError : String -> Void) : Void;
-	public static function connect(id : String, onSuccess : BluetoothLEPeripheral -> Void, onError : BluetoothLEPeripheral -> Void) : Void;
+	public static function connect(id : String, onSuccess : BluetoothLEPeripheral -> Void, onError : String -> Void) : Void;
 	public static function disconnect(id : String, onSuccess : Void -> Void, onError : String -> Void) : Void;
-	public static function write(deviceId : String, serviceUuid : String, characteristicUuid : String, data : js.html.ArrayBuffer, onSuccess : Dynamic -> Void, onError : String -> Void) : Void;
+	public static function write(deviceId : String, serviceUuid : String, characteristicUuid : String, data : js.html.ArrayBuffer, ? onSuccess : Dynamic -> Void, ? onError : String -> Void) : Void;
 	public static function writeWithoutResponse(deviceId : String, serviceUuid : String, characteristicUuid : String, data : js.html.ArrayBuffer, onSuccess : Dynamic -> Void, onError : String -> Void) : Void;
     public static function startStateNotifications(success : BTState -> Void, failure : String -> Void) : Void;
     public static function stopStateNotifications(success : Void -> Void, failure : String -> Void) : Void;

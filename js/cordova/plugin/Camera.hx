@@ -2,7 +2,7 @@ package js.cordova.plugin;
 
 @:enum
 abstract CameraDirection(Int) {
-	var Ack = 0;
+	var Back = 0;
 	var Front = 1;
 }
 

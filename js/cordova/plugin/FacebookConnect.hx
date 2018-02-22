@@ -16,9 +16,14 @@ typedef FacebookConnectStatus = {
 
 typedef FacebookConnectDialogOptions = {
 	method : String,
+	? href : String,
 	? link : String,
 	? caption : String,
-	? message : String
+	? description : String,
+	? picture : String,
+	? message : String,
+	? hashtag : String,
+	? share_feedWeb : Bool, // ios only
 }
 typedef FacebookConnectDialogResult = {
 	? postId : String,
@@ -31,12 +36,12 @@ Extern for the [phonegap-facebook-plugin](https://github.com/Wizcorp/phonegap-fa
 **/
 @:native("window.facebookConnectPlugin")
 extern class FacebookConnect {
-	public static function login(permissions : Array<String>, onSuccess : FacebookConnectStatus -> Void, onFailure : String -> Void) : Void;
-	public static function getAccessToken(onSuccess : String -> Void, onFailure : String -> Void) : Void;
-	public static function logout(onSuccess : Void -> Void, onFailure : String -> Void) : Void;
-	public static function getLoginStatus(onSuccess : FacebookConnectStatus -> Void, onFailure : String -> Void) : Void;
-	public static function showDialog(options : FacebookConnectDialogOptions, onSuccess : FacebookConnectDialogResult -> Void, onFailure : String -> Void) : Void;
-	public static function api(requestPath : String, permissions : Array<String>, onSuccess : Dynamic -> Void, onFailure : String -> Void) : Void;
-	public static function logEvent(name : String, params : Dynamic, valueToSum : Float, onSuccess : Dynamic -> Void, onFailure : String -> Void) : Void;
-	public static function logPurchase(value : Float, currency : String, onSuccess : Dynamic -> Void, onFailure : String -> Void) : Void;
+	public static function login(permissions : Array<String>, ? onSuccess : FacebookConnectStatus -> Void, ? onFailure : String -> Void) : Void;
+	public static function getAccessToken(? onSuccess : String -> Void, ? onFailure : String -> Void) : Void;
+	public static function logout(? onSuccess : Void -> Void, ? onFailure : String -> Void) : Void;
+	public static function getLoginStatus(? onSuccess : FacebookConnectStatus -> Void, ? onFailure : String -> Void) : Void;
+	public static function showDialog(options : FacebookConnectDialogOptions, ? onSuccess : FacebookConnectDialogResult -> Void, ? onFailure : String -> Void) : Void;
+	public static function api(requestPath : String, permissions : Array<String>, ? onSuccess : Dynamic -> Void, ? onFailure : String -> Void) : Void;
+	public static function logEvent(name : String, params : Dynamic, valueToSum : Float, ? onSuccess : Dynamic -> Void, ? onFailure : String -> Void) : Void;
+	public static function logPurchase(value : Float, currency : String, ? onSuccess : Dynamic -> Void, ? onFailure : String -> Void) : Void;
 }

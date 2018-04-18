@@ -1,12 +1,13 @@
 package js.cordova.plugin;
 
 /**
-Extern for the [ionic-plugin-keyboard](https://github.com/driftyco/ionic-plugin-keyboard) plugin.
+Extern for the [cordova-plugin-ionic-keyboard](https://github.com/ionic-team/cordova-plugin-ionic-keyboard) plugin.
 **/
-@:native("window.cordova.plugins.Keyboard")
+@:native("Keyboard")
 extern class IonicKeyboard {
-	static public function hideKeyboardAccessoryBar(v : Bool) : Void;
+	static public function hideKeyboardAccessoryBar(value : Bool) : Void;
+	static public function hideFormAccessoryBar(value : Bool, ? success : Bool -> Void) : Void;
 	static public function close() : Void;
-	static public function disableScroll(v : Bool) : Void;
+	static public function hide() : Void;
 	static public function show() : Void;
 }

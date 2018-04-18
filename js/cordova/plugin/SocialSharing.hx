@@ -7,6 +7,7 @@ Extern for the [cordova-plugin-x-socialsharing](https://github.com/EddyVerbrugge
 extern class SocialSharing {
 	public static function canShareVia(srvId : String, msg : String, ? subject : String, ? fileUri : String, ? url : String, ? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
 	public static function share(msg : String, ? subject : String, ? fileUri : String, ? url : String, ? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
+	public static function shareWithOptions(options : Dynamic, ? successCb : Dynamic -> Void, ? errorCb : String -> Void) : Void;
 	public static function shareViaTwitter(msg : String, ? fileUri : String, ? url : String, ? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
 	public static function shareViaFacebook(msg : String, ? fileUri : String, ? url : String, ? successCb : Void -> Void, ? errorCb : String -> Void) : Void;
 	public static function shareViaEmail(msg : String, subject : String, to : Array<String>, ? cc : Null<Array<String>>, ? bcc : Null<Array<String>>, ? files : Null<Array<String>>, ? onSuccess : Void -> Void, ? onError : String -> Void) : Void;

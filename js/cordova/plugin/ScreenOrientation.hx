@@ -1,6 +1,6 @@
 package js.cordova.plugin;
 
-@:enum
+@:enum @:forward
 abstract Orientation(String) from String to String {	
 	var PortraitPrimary = "portrait-primary";
 	var PortraitSecondary = "portrait-secondary";
